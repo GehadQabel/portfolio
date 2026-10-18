@@ -126,19 +126,21 @@ export default function PortfolioPage() {
     <div className="min-h-screen bg-slate-50 dark:bg-[#0a0f1d] text-slate-900 dark:text-slate-100 font-sans selection:bg-sky-500 selection:text-white transition-colors duration-300">
       
       {/* 🌟 Modern Navbar */}
-      <header className="sticky top-0 z-40 bg-white/85 dark:bg-slate-900/85 backdrop-blur-xl border-b border-slate-200/80 dark:border-slate-800 px-4 sm:px-8 py-3.5 flex items-center justify-between shadow-sm transition-colors duration-300">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-sky-600 via-indigo-600 to-purple-600 flex items-center justify-center font-black text-white text-base shadow-md shadow-sky-500/20">
+      <header className="sticky top-0 z-40 bg-white/85 dark:bg-slate-900/85 backdrop-blur-xl border-b border-slate-200/80 dark:border-slate-800 px-4 sm:px-8 py-3 flex items-center justify-between shadow-sm transition-colors duration-300">
+        <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-gradient-to-tr from-sky-600 via-indigo-600 to-purple-600 flex items-center justify-center font-black text-white text-sm sm:text-base shadow-md shadow-sky-500/20 shrink-0">
             GQ
           </div>
-          <div>
-            <span className="text-sm font-black tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
-              Gehad Qabel
-              <span className="text-[10px] bg-sky-100 dark:bg-sky-950/80 text-sky-800 dark:text-sky-300 px-2 py-0.5 rounded-full font-bold border border-sky-200 dark:border-sky-800">
-                Data Analyst | Python &amp; AI
+          <div className="min-w-0">
+            <div className="flex items-center gap-1.5 flex-wrap">
+              <span className="text-xs sm:text-sm font-black tracking-tight text-slate-900 dark:text-white truncate">
+                Gehad Qabel
               </span>
-            </span>
-            <p className="text-[11px] text-slate-500 dark:text-slate-400">Windows Desktop Applications &amp; Enterprise Systems</p>
+              <span className="text-[9px] sm:text-[10px] bg-sky-100 dark:bg-sky-950/80 text-sky-800 dark:text-sky-300 px-1.5 sm:px-2 py-0.5 rounded-full font-bold border border-sky-200 dark:border-sky-800 whitespace-nowrap">
+                Data Analyst | AI
+              </span>
+            </div>
+            <p className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 truncate hidden xs:block">Desktop &amp; Enterprise Systems</p>
           </div>
         </div>
 
@@ -153,8 +155,8 @@ export default function PortfolioPage() {
         </nav>
 
         {/* Status Pill, Theme Toggle & CTA */}
-        <div className="flex items-center gap-2.5">
-          <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60">
+        <div className="flex items-center gap-2 shrink-0">
+          <span className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             Open for Opportunities
           </span>
@@ -174,42 +176,42 @@ export default function PortfolioPage() {
 
           <button 
             onClick={() => setIsCvModalOpen(true)}
-            className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-sky-600 dark:hover:bg-sky-500 text-white text-xs font-bold shadow-md transition-all flex items-center gap-1.5"
+            className="px-3 sm:px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-sky-600 dark:hover:bg-sky-500 text-white text-xs font-bold shadow-md transition-all flex items-center gap-1.5 whitespace-nowrap"
           >
-            <FileText className="w-4 h-4 text-sky-400 dark:text-white" />
-            <span>View CV</span>
+            <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-sky-400 dark:text-white" />
+            <span>CV</span>
           </button>
         </div>
       </header>
 
       {/* 🌟 1. HERO SECTION */}
-      <section id="about" className="max-w-7xl mx-auto px-4 sm:px-8 py-16 sm:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section id="about" className="max-w-7xl mx-auto px-4 sm:px-8 py-10 sm:py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
         {/* Hero Left: Bio & High Impact Headlines (7 cols) */}
         <div className="lg:col-span-7 space-y-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 dark:bg-sky-950/60 border border-sky-200 dark:border-sky-800 text-sky-800 dark:text-sky-300 text-xs font-bold shadow-sm">
-            <Monitor className="w-4 h-4 text-sky-600 dark:text-sky-400" />
-            <span>Building Reliable Desktop Applications &amp; Enterprise Business Systems</span>
+            <Monitor className="w-4 h-4 text-sky-600 dark:text-sky-400 shrink-0" />
+            <span className="leading-tight">Building Reliable Desktop Applications &amp; Enterprise Business Systems</span>
           </div>
 
           <div className="space-y-2">
             <h1 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
               Hi, I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-indigo-600 to-purple-600 dark:from-sky-400 dark:via-indigo-400 dark:to-purple-400">Gehad Qabel</span>
             </h1>
-            <p className="text-lg sm:text-xl font-bold text-slate-700 dark:text-slate-200">
+            <p className="text-base sm:text-xl font-bold text-slate-700 dark:text-slate-200 leading-snug">
               Data Analyst | Python &amp; AI Enthusiast • Desktop &amp; ERP Developer
             </p>
           </div>
 
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-normal leading-relaxed">
+          <p className="text-sm sm:text-lg text-slate-600 dark:text-slate-300 font-normal leading-relaxed">
             I build reliable business management systems, Windows desktop applications, and database-driven software solutions. My experience includes developing offline-first Point of Sale systems, enterprise resource planning platforms, inventory management workflows, and secure business applications using modern web and desktop technologies.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-wrap items-center gap-3 pt-2">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
             <a
               href="#projects"
-              className="px-6 py-3 rounded-2xl bg-gradient-to-r from-sky-600 via-indigo-600 to-purple-600 hover:from-sky-500 hover:to-purple-500 text-white font-bold text-xs shadow-lg shadow-sky-500/25 flex items-center gap-2 transition-all hover:scale-[1.02]"
+              className="px-6 py-3 rounded-2xl bg-gradient-to-r from-sky-600 via-indigo-600 to-purple-600 hover:from-sky-500 hover:to-purple-500 text-white font-bold text-xs shadow-lg shadow-sky-500/25 flex items-center justify-center gap-2 transition-all hover:scale-[1.02]"
             >
               <span>Explore Flagship Systems</span>
               <ArrowDownRight className="w-4 h-4" />
@@ -217,7 +219,7 @@ export default function PortfolioPage() {
 
             <button
               onClick={() => setIsCvModalOpen(true)}
-              className="px-6 py-3 rounded-2xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 font-bold text-xs shadow-sm flex items-center gap-2 transition-all"
+              className="px-6 py-3 rounded-2xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 font-bold text-xs shadow-sm flex items-center justify-center gap-2 transition-all"
             >
               <Download className="w-4 h-4 text-sky-600 dark:text-sky-400" />
               <span>Download Full CV</span>
@@ -225,32 +227,32 @@ export default function PortfolioPage() {
           </div>
 
           {/* Core Architectural Highlights Grid */}
-          <div className="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200 dark:border-slate-800">
-            <div>
-              <span className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white font-mono">Offline-First</span>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 pt-6 border-t border-slate-200 dark:border-slate-800">
+            <div className="p-3 bg-slate-100/60 dark:bg-slate-800/40 rounded-xl sm:bg-transparent sm:p-0">
+              <span className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white font-mono block">Offline-First</span>
               <p className="text-xs text-slate-500 dark:text-slate-400 font-semibold">Windows Desktop Architecture</p>
             </div>
-            <div>
-              <span className="text-xl sm:text-2xl font-black text-sky-600 dark:text-sky-400 font-mono">5 RBAC Roles</span>
+            <div className="p-3 bg-slate-100/60 dark:bg-slate-800/40 rounded-xl sm:bg-transparent sm:p-0">
+              <span className="text-xl sm:text-2xl font-black text-sky-600 dark:text-sky-400 font-mono block">5 RBAC Roles</span>
               <p className="text-xs text-slate-500 dark:text-slate-400 font-semibold">Enterprise ERP Security</p>
             </div>
-            <div>
-              <span className="text-xl sm:text-2xl font-black text-emerald-600 dark:text-emerald-400 font-mono">Commercial</span>
+            <div className="p-3 bg-slate-100/60 dark:bg-slate-800/40 rounded-xl sm:bg-transparent sm:p-0">
+              <span className="text-xl sm:text-2xl font-black text-emerald-600 dark:text-emerald-400 font-mono block">Commercial</span>
               <p className="text-xs text-slate-500 dark:text-slate-400 font-semibold">Sold To First Retail Client</p>
             </div>
           </div>
         </div>
 
         {/* Hero Right: Framed Profile Container with Picture */}
-        <div className="lg:col-span-5 relative flex justify-center">
+        <div className="lg:col-span-5 relative flex justify-center w-full">
           
-          <div className="relative w-full max-w-sm glass-card rounded-3xl p-6 sm:p-7 border border-slate-200/90 dark:border-slate-800 shadow-2xl glass-card-hover text-center space-y-4 group">
+          <div className="relative w-full max-w-sm glass-card rounded-3xl p-5 sm:p-7 border border-slate-200/90 dark:border-slate-800 shadow-2xl glass-card-hover text-center space-y-4 group">
             
             {/* Ambient Glow */}
             <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-sky-400 via-indigo-500 to-purple-500 opacity-25 dark:opacity-40 blur-xl -z-10 group-hover:opacity-45 dark:group-hover:opacity-60 transition-opacity duration-500"></div>
 
             {/* Profile Portrait Circular Frame with Blue-to-Purple Gradient */}
-            <div className="relative w-40 h-40 mx-auto rounded-full p-[3.5px] bg-gradient-to-tr from-sky-500 via-indigo-600 to-purple-500 shadow-xl shadow-indigo-500/25 transition-transform duration-500 ease-out group-hover:scale-105">
+            <div className="relative w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-full p-[3.5px] bg-gradient-to-tr from-sky-500 via-indigo-600 to-purple-500 shadow-xl shadow-indigo-500/25 transition-transform duration-500 ease-out group-hover:scale-105">
               <div className="w-full h-full rounded-full overflow-hidden bg-slate-100 dark:bg-slate-800 flex items-center justify-center ring-2 ring-white dark:ring-slate-900">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
@@ -284,7 +286,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* Directional Indicator */}
-            <div className="pt-2 flex items-center justify-center gap-2 text-xs font-bold text-sky-700 dark:text-sky-400 arrow-animated">
+            <div className="pt-1 flex items-center justify-center gap-2 text-xs font-bold text-sky-700 dark:text-sky-400 arrow-animated">
               <span>View ZAAD POS &amp; EMDAD ERP Below</span>
               <ArrowDownRight className="w-4 h-4" />
             </div>
@@ -293,8 +295,8 @@ export default function PortfolioPage() {
       </section>
 
       {/* 🌟 2. FEATURED FLAGSHIP PROJECTS SECTION */}
-      <section id="projects" className="bg-slate-100/70 dark:bg-slate-950/60 py-20 border-y border-slate-200 dark:border-slate-800 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-16">
+      <section id="projects" className="bg-slate-100/70 dark:bg-slate-950/60 py-12 sm:py-20 border-y border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-10 sm:space-y-16">
           
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <span className="text-xs font-bold uppercase tracking-wider text-sky-700 dark:text-sky-300 bg-sky-100 dark:bg-sky-950/80 px-3.5 py-1 rounded-full border border-sky-200 dark:border-sky-800">
@@ -311,52 +313,52 @@ export default function PortfolioPage() {
           {/* ========================================================
               PROJECT 1: ZAAD POS (PRIMARY FLAGSHIP PROJECT)
           ======================================================== */}
-          <div id="zaad" className="glass-card rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-xl space-y-8">
+          <div id="zaad" className="glass-card rounded-3xl p-5 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-xl space-y-6 sm:space-y-8">
             
             {/* Header & Commercial Milestone */}
             <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 pb-6 border-b border-slate-200 dark:border-slate-800">
               <div className="space-y-3">
-                <div className="flex flex-wrap items-center gap-2.5">
+                <div className="flex flex-wrap items-center gap-2">
                   <span className="px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-950/80 text-indigo-900 dark:text-indigo-300 text-xs font-bold border border-indigo-200 dark:border-indigo-800 flex items-center gap-1.5">
-                    <Monitor className="w-3.5 h-3.5 text-indigo-700 dark:text-indigo-400" /> Windows Desktop Software
+                    <Monitor className="w-3.5 h-3.5 text-indigo-700 dark:text-indigo-400 shrink-0" /> Windows Desktop Software
                   </span>
                   <span className="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-xs font-bold border border-emerald-200 dark:border-emerald-800 flex items-center gap-1.5">
-                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> Commercial Milestone: Successfully sold to the first client
+                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" /> Commercial Milestone: Successfully sold to the first client
                   </span>
                 </div>
 
                 <div>
-                  <h3 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
+                  <h3 className="text-xl sm:text-3xl font-black text-slate-900 dark:text-white leading-snug">
                     ZAAD POS — Windows Desktop Retail Management System
                   </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 font-semibold mt-1">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-semibold mt-1">
                     Offline-First Point of Sale &amp; Retail Operations Platform
                   </p>
                 </div>
 
-                <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed max-w-3xl">
+                <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed max-w-3xl">
                   ZAAD POS is an offline-first Windows desktop retail management application designed to support supermarket and retail operations without requiring a continuous internet connection. The system integrates sales processing, inventory management, purchasing, customer and supplier accounts, returns, cashier shift management, and operational reporting into a unified desktop platform.
                 </p>
 
                 {/* Tech Pills */}
-                <div className="flex flex-wrap gap-2 pt-1 text-xs font-bold text-slate-700 dark:text-slate-200">
-                  <span className="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">Electron.js</span>
-                  <span className="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">React.js</span>
-                  <span className="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">JavaScript</span>
-                  <span className="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">SQLite (better-sqlite3)</span>
-                  <span className="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">Tailwind CSS</span>
-                  <span className="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">Vite</span>
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1 text-xs font-bold text-slate-700 dark:text-slate-200">
+                  <span className="px-2.5 sm:px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">Electron.js</span>
+                  <span className="px-2.5 sm:px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">React.js</span>
+                  <span className="px-2.5 sm:px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">JavaScript</span>
+                  <span className="px-2.5 sm:px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">SQLite (better-sqlite3)</span>
+                  <span className="px-2.5 sm:px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">Tailwind CSS</span>
+                  <span className="px-2.5 sm:px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">Vite</span>
                 </div>
               </div>
 
               {/* Action Buttons for Media */}
-              <div className="flex flex-wrap sm:flex-col gap-2.5 shrink-0">
+              <div className="flex flex-col sm:flex-row lg:flex-col gap-2.5 shrink-0 w-full lg:w-auto">
                 <button
                   onClick={() => {
                     setSelectedScreenshotIndex(0);
                     setActiveMediaModal('SCREENSHOTS');
                   }}
-                  className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-sky-500/20 transition-all"
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-sky-500/20 transition-all"
                 >
                   <ImageIcon className="w-4 h-4" />
                   <span>View Screenshots ({zaadScreenshots.length})</span>
@@ -364,7 +366,7 @@ export default function PortfolioPage() {
 
                 <button
                   onClick={() => setActiveMediaModal('VIDEO')}
-                  className="px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all border border-slate-800 dark:border-slate-700"
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all border border-slate-800 dark:border-slate-700"
                 >
                   <Play className="w-4 h-4 text-emerald-400" />
                   <span>Watch Demo Video</span>
@@ -372,7 +374,7 @@ export default function PortfolioPage() {
 
                 <button
                   onClick={() => setActiveMediaModal('ARCHITECTURE')}
-                  className="px-5 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all"
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all"
                 >
                   <Layers className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
                   <span>Technical Overview</span>
@@ -466,42 +468,42 @@ export default function PortfolioPage() {
             </div>
 
             {/* Architecture Diagram Visualization */}
-            <div className="p-6 bg-slate-900 text-white rounded-2xl space-y-4">
-              <div className="flex items-center justify-between">
+            <div className="p-4 sm:p-6 bg-slate-900 text-white rounded-2xl space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
                   <Code2 className="w-4 h-4 text-sky-400" />
                   Desktop System Architecture &amp; Data Flow
                 </h4>
-                <span className="text-[11px] font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded border border-emerald-500/20">
+                <span className="text-[10px] sm:text-[11px] font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded border border-emerald-500/20 self-start sm:self-auto">
                   Strictly Local Persistence
                 </span>
               </div>
 
               {/* Diagram Flow */}
-              <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 text-center">
-                <div className="p-3.5 bg-slate-800/80 rounded-xl border border-slate-700 text-xs">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 text-center">
+                <div className="p-3 sm:p-3.5 bg-slate-800/80 rounded-xl border border-slate-700 text-xs">
                   <span className="text-[10px] text-sky-400 font-mono block mb-1">Layer 1 • UI</span>
-                  <strong className="text-white font-bold block">React Frontend</strong>
-                  <span className="text-[10px] text-slate-400">Vite + Tailwind CSS</span>
+                  <strong className="text-white font-bold block text-xs sm:text-sm">React Frontend</strong>
+                  <span className="text-[10px] text-slate-400">Vite + Tailwind</span>
                 </div>
-                <div className="p-3.5 bg-slate-800/80 rounded-xl border border-slate-700 text-xs">
+                <div className="p-3 sm:p-3.5 bg-slate-800/80 rounded-xl border border-slate-700 text-xs">
                   <span className="text-[10px] text-sky-400 font-mono block mb-1">Layer 2 • Bridge</span>
-                  <strong className="text-white font-bold block">Electron IPC / Preload</strong>
-                  <span className="text-[10px] text-slate-400">Context Isolation Bridge</span>
+                  <strong className="text-white font-bold block text-xs sm:text-sm">Electron IPC</strong>
+                  <span className="text-[10px] text-slate-400">Context Isolation</span>
                 </div>
-                <div className="p-3.5 bg-slate-800/80 rounded-xl border border-slate-700 text-xs">
+                <div className="p-3 sm:p-3.5 bg-slate-800/80 rounded-xl border border-slate-700 text-xs">
                   <span className="text-[10px] text-sky-400 font-mono block mb-1">Layer 3 • Node</span>
-                  <strong className="text-white font-bold block">Application Logic</strong>
-                  <span className="text-[10px] text-slate-400">Transactions &amp; Reporting</span>
+                  <strong className="text-white font-bold block text-xs sm:text-sm">Business Logic</strong>
+                  <span className="text-[10px] text-slate-400">Transactions</span>
                 </div>
-                <div className="p-3.5 bg-slate-800/80 rounded-xl border border-slate-700 text-xs">
+                <div className="p-3 sm:p-3.5 bg-slate-800/80 rounded-xl border border-slate-700 text-xs">
                   <span className="text-[10px] text-emerald-400 font-mono block mb-1">Layer 4 • Storage</span>
-                  <strong className="text-white font-bold block">Local SQLite DB</strong>
+                  <strong className="text-white font-bold block text-xs sm:text-sm">Local SQLite DB</strong>
                   <span className="text-[10px] text-slate-400">ACID SQLite Persistence</span>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-300 pt-2 border-t border-slate-800">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3 text-xs text-slate-300 pt-2 border-t border-slate-800">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                   <span>Continuous offline operation without internet</span>
@@ -522,12 +524,12 @@ export default function PortfolioPage() {
           {/* ========================================================
               PROJECT 2: EMDAD ERP (SECOND FLAGSHIP PROJECT)
           ======================================================== */}
-          <div id="emdad" className="glass-card rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-xl space-y-8">
+          <div id="emdad" className="glass-card rounded-3xl p-5 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-xl space-y-6 sm:space-y-8">
             <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 pb-6 border-b border-slate-200 dark:border-slate-800">
               <div className="space-y-3">
-                <div className="flex flex-wrap items-center gap-2.5">
+                <div className="flex flex-wrap items-center gap-2">
                   <span className="px-3 py-1 rounded-full bg-sky-100 dark:bg-sky-950/80 text-sky-900 dark:text-sky-300 text-xs font-bold border border-sky-200 dark:border-sky-800 flex items-center gap-1.5">
-                    <Globe className="w-3.5 h-3.5 text-sky-700 dark:text-sky-400" /> Cloud Enterprise Platform
+                    <Globe className="w-3.5 h-3.5 text-sky-700 dark:text-sky-400 shrink-0" /> Cloud Enterprise Platform
                   </span>
                   <span className="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-300 text-xs font-bold border border-emerald-200 dark:border-emerald-800">
                     Live Demo Available
@@ -535,35 +537,35 @@ export default function PortfolioPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
+                  <h3 className="text-xl sm:text-3xl font-black text-slate-900 dark:text-white leading-snug">
                     EMDAD ERP — Enterprise Distribution Management Platform
                   </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 font-semibold mt-1">
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-semibold mt-1">
                     B2B Food &amp; Wholesale Supply Chain Operating System
                   </p>
                 </div>
 
-                <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed max-w-3xl">
+                <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed max-w-3xl">
                   A business management platform designed to support food distribution operations through integrated sales, purchasing, warehouse, finance, and administrative workflows. The platform enforces database-level Row-Level Security (RLS) policies, automated credit risk controls, and comprehensive compliance audit logging.
                 </p>
 
                 {/* Tech Pills */}
-                <div className="flex flex-wrap gap-2 pt-1 text-xs font-bold text-slate-700 dark:text-slate-200">
-                  <span className="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">Next.js 14</span>
-                  <span className="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">TypeScript</span>
-                  <span className="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">Supabase (PostgreSQL RLS)</span>
-                  <span className="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">Tailwind CSS</span>
-                  <span className="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">Vercel</span>
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1 text-xs font-bold text-slate-700 dark:text-slate-200">
+                  <span className="px-2.5 sm:px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">Next.js 14</span>
+                  <span className="px-2.5 sm:px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">TypeScript</span>
+                  <span className="px-2.5 sm:px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">Supabase (PostgreSQL RLS)</span>
+                  <span className="px-2.5 sm:px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">Tailwind CSS</span>
+                  <span className="px-2.5 sm:px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">Vercel</span>
                 </div>
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-wrap sm:flex-col gap-2.5 shrink-0">
+              <div className="flex flex-col sm:flex-row lg:flex-col gap-2.5 shrink-0 w-full lg:w-auto">
                 <a
                   href="https://emdad-erp-pjvy.vercel.app"
                   target="_blank"
                   rel="noreferrer"
-                  className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-lg shadow-sky-500/20 transition-all"
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-lg shadow-sky-500/20 transition-all"
                 >
                   <span>Launch Live Demo</span>
                   <ExternalLink className="w-4 h-4" />
@@ -573,7 +575,7 @@ export default function PortfolioPage() {
                   href="https://github.com/GehadQabel/emdad-erp"
                   target="_blank"
                   rel="noreferrer"
-                  className="px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all border border-slate-800 dark:border-slate-700"
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all border border-slate-800 dark:border-slate-700"
                 >
                   <Github className="w-4 h-4" />
                   <span>GitHub Repository</span>
@@ -586,12 +588,12 @@ export default function PortfolioPage() {
               <h4 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
                 Explore 5 Role-Based Workspaces (RBAC):
               </h4>
-              <div className="flex items-center gap-2 overflow-x-auto pb-2">
+              <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
                 {(['ADMIN', 'FINANCE', 'WAREHOUSE', 'PURCHASING', 'SALES'] as const).map((role) => (
                   <button
                     key={role}
                     onClick={() => setSelectedRolePreview(role)}
-                    className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${selectedRolePreview === role ? 'bg-sky-600 text-white shadow-md' : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-slate-900 dark:hover:text-white'}`}
+                    className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all shrink-0 ${selectedRolePreview === role ? 'bg-sky-600 text-white shadow-md' : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-slate-900 dark:hover:text-white'}`}
                   >
                     {role} Workspace
                   </button>
@@ -827,21 +829,21 @@ export default function PortfolioPage() {
 
       {/* 🌟 ZAAD POS MEDIA GALLERIES MODAL */}
       {activeMediaModal === 'SCREENSHOTS' && (
-        <div className="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 max-w-4xl w-full shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4">
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl sm:rounded-3xl p-4 sm:p-8 max-w-4xl w-full shadow-2xl space-y-3 sm:space-y-4 max-h-[92vh] overflow-y-auto">
             <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
-              <div>
-                <h3 className="text-base font-black text-slate-900 dark:text-white flex items-center gap-2">
-                  <ImageIcon className="w-4 h-4 text-sky-600 dark:text-sky-400" />
-                  ZAAD POS Desktop Application Screenshots
+              <div className="pr-2">
+                <h3 className="text-sm sm:text-base font-black text-slate-900 dark:text-white flex items-center gap-2">
+                  <ImageIcon className="w-4 h-4 text-sky-600 dark:text-sky-400 shrink-0" />
+                  ZAAD POS Screenshots
                 </h3>
-                <p className="text-xs text-slate-500 dark:text-slate-400">
-                  Verified Windows desktop interface captures from the working application
+                <p className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400">
+                  Verified Windows desktop interface captures
                 </p>
               </div>
               <button 
                 onClick={() => setActiveMediaModal('NONE')}
-                className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300"
+                className="p-1.5 sm:p-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 shrink-0"
               >
                 <X className="w-4 h-4" />
               </button>
