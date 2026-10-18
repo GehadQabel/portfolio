@@ -217,13 +217,14 @@ export default function PortfolioPage() {
               <ArrowDownRight className="w-4 h-4" />
             </a>
 
-            <button
-              onClick={() => setIsCvModalOpen(true)}
+            <a
+              href="/Gehad_Qabel_CV.pdf"
+              download="Gehad_Qabel_CV.pdf"
               className="px-6 py-3 rounded-2xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 font-bold text-xs shadow-sm flex items-center justify-center gap-2 transition-all"
             >
               <Download className="w-4 h-4 text-sky-600 dark:text-sky-400" />
               <span>Download Full CV</span>
-            </button>
+            </a>
           </div>
 
           {/* Core Architectural Highlights Grid */}
@@ -744,83 +745,74 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* 🌟 9. INTERACTIVE CV MODAL */}
+      {/* 🌟 9. INTERACTIVE CV MODAL (REAL PDF EMBEDDED) */}
       {isCvModalOpen && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 max-w-2xl w-full shadow-2xl space-y-6 max-h-[85vh] overflow-y-auto">
-            <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
-              <div>
-                <h3 className="text-lg font-black text-slate-900 dark:text-white">Gehad Qabel • Curriculum Vitae</h3>
-                <p className="text-xs text-slate-500 dark:text-slate-400 font-semibold">Data Analyst &amp; Software Developer</p>
-              </div>
-              <button 
-                onClick={() => setIsCvModalOpen(false)}
-                className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-
-            {/* CV Body Preview */}
-            <div className="space-y-4 text-xs text-slate-700 dark:text-slate-300">
-              <div>
-                <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1">Executive Summary</h4>
-                <p className="leading-relaxed text-slate-600 dark:text-slate-400">
-                  Data Analyst and Software Developer specializing in Windows desktop applications, enterprise resource planning (ERP) platforms, and retail operations software. Proven track record in designing offline-first architectures, building transactional POS systems with local SQLite databases, and implementing multi-role access control for enterprise distribution networks.
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4">
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl sm:rounded-3xl p-4 sm:p-6 max-w-4xl w-full shadow-2xl space-y-4 max-h-[95vh] flex flex-col">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800 shrink-0">
+              <div className="pr-2">
+                <h3 className="text-sm sm:text-base font-black text-slate-900 dark:text-white flex items-center gap-2">
+                  <FileText className="w-5 h-5 text-sky-600 dark:text-sky-400 shrink-0" />
+                  Gehad Qabel — Official Curriculum Vitae
+                </h3>
+                <p className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400">
+                  Data Analyst &amp; Software Developer • 2 Pages Official Resume
                 </p>
               </div>
-
-              <div>
-                <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1">Flagship Engineering Projects</h4>
-                <div className="space-y-3">
-                  <div className="p-3 bg-slate-50 dark:bg-slate-800/70 rounded-xl border border-slate-200 dark:border-slate-700">
-                    <strong className="text-slate-900 dark:text-white block font-bold">ZAAD POS — Windows Desktop Retail Management System</strong>
-                    <span className="text-[11px] text-sky-700 dark:text-sky-400 font-mono font-semibold">Technologies: Electron.js, React.js, SQLite, Vite, Tailwind CSS</span>
-                    <p className="text-slate-600 dark:text-slate-400 mt-1">
-                      Architected an offline-first Windows desktop retail application integrating sales, inventory, supplier purchasing, customer credit accounts, cashier shifts, and daily Z-reports. Successfully sold to the first retail client.
-                    </p>
-                  </div>
-
-                  <div className="p-3 bg-slate-50 dark:bg-slate-800/70 rounded-xl border border-slate-200 dark:border-slate-700">
-                    <strong className="text-slate-900 dark:text-white block font-bold">EMDAD ERP — Enterprise Distribution Management Platform</strong>
-                    <span className="text-[11px] text-sky-700 dark:text-sky-400 font-mono font-semibold">Technologies: Next.js 14, TypeScript, Supabase, PostgreSQL RLS, Tailwind CSS</span>
-                    <p className="text-slate-600 dark:text-slate-400 mt-1">
-                      Designed a multi-role enterprise distribution system with 5 dedicated RBAC workspaces, automated supermarket credit risk controls, real-time 3-tier inventory monitoring, and immutable compliance audit logs.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1">Technical Skills</h4>
-                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                  <strong>Desktop &amp; Frontend:</strong> Electron.js, React.js, JavaScript, TypeScript, Next.js, Tailwind CSS.<br />
-                  <strong>Databases:</strong> SQLite (better-sqlite3), PostgreSQL, Supabase, Relational Database Design, Data Integrity.<br />
-                  <strong>Enterprise Systems:</strong> ERP Architectures, Point of Sale, Shift Management, Inventory Ledgers, Role-Based Access Control.<br />
-                  <strong>Tools:</strong> Git, GitHub, Vitest, Node.js, Electron Builder.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-800">
-              <span className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
-                CV Version: Tailored for Data Analytics &amp; ERP Engineering
-              </span>
               <div className="flex items-center gap-2">
-                <button onClick={() => setIsCvModalOpen(false)} className="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold">
+                <a
+                  href="/Gehad_Qabel_CV.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hidden sm:inline-flex px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold items-center gap-1.5 border border-slate-200 dark:border-slate-700"
+                >
+                  <ExternalLink className="w-3.5 h-3.5" />
+                  <span>Open in New Tab</span>
+                </a>
+                <a
+                  href="/Gehad_Qabel_CV.pdf"
+                  download="Gehad_Qabel_CV.pdf"
+                  className="px-3.5 py-1.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold flex items-center gap-1.5 shadow-md shadow-sky-500/20"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Download PDF</span>
+                </a>
+                <button 
+                  onClick={() => setIsCvModalOpen(false)}
+                  className="p-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            {/* Embedded PDF Viewer */}
+            <div className="flex-1 min-h-[60vh] sm:min-h-[70vh] rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-950 shadow-inner">
+              <iframe 
+                src="/Gehad_Qabel_CV.pdf#toolbar=1" 
+                className="w-full h-full min-h-[60vh] sm:min-h-[70vh]"
+                title="Gehad Qabel CV"
+              />
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 text-xs text-slate-500 dark:text-slate-400 shrink-0">
+              <span className="text-[11px] sm:text-xs text-center sm:text-left">
+                Verified official CV • Computer Science (EELU) • Cairo, Egypt
+              </span>
+              <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
+                <a
+                  href="/Gehad_Qabel_CV.pdf"
+                  download="Gehad_Qabel_CV.pdf"
+                  className="text-center px-4 py-2 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-xs"
+                >
+                  Download (.pdf)
+                </a>
+                <button
+                  onClick={() => setIsCvModalOpen(false)}
+                  className="px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs"
+                >
                   Close
                 </button>
-                <a
-                  href="#contact"
-                  onClick={() => {
-                    setIsCvModalOpen(false);
-                    alert('To request the latest PDF copy with customized portfolio attachments, please use the contact email below!');
-                  }}
-                  className="px-5 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold flex items-center gap-1.5 shadow-md shadow-sky-500/20"
-                >
-                  <Download className="w-4 h-4" />
-                  <span>Request Full PDF CV</span>
-                </a>
               </div>
             </div>
           </div>
